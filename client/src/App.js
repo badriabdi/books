@@ -9,14 +9,16 @@ import Nav from "./components/Nav";
 function App() {
   return (
     <Router>
+      <>
       <Nav />
 
       <Switch>
         <Route exact path="/"component = {Books}/>
         <Route exact path="/book"component ={Books}/>
-        <Route exact path="/book:id"component ={Detail}/>
+        <Route exact path="/book/:id"component ={Detail}/>
         <Route component ={NoMatch}/>
       </Switch>
+      </>
       
     </Router>
   );
